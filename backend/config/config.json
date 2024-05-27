@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "magabilin",
-    "database": "sqa",
+    "password": "redzki15",
+    "database": "sqaDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
