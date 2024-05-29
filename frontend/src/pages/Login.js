@@ -24,22 +24,22 @@ function Login() {
   };
   return (
     <div className="loginContainer">
-      <label>Username:</label>
+      <label data-testid="username">Username:</label>
       <input
-        type="text"
+        type="text" data-testid="action-username"
         onChange={(event) => {
           setUsername(event.target.value);
         }}
       />
-      <label>Password:</label>
+      <label data-testid="password">Password:</label>
       <input
-        type="password"
+        type="password" data-testid="action-password"
         onChange={(event) => {
           setPassword(event.target.value);
         }}
       />
 
-      <button onClick={login}> Login </button>
+      <button onClick={login} data-testid="loginbtn">Login</button>
     </div>
   );
 }

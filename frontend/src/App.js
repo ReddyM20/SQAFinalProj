@@ -50,19 +50,19 @@ function App() {
             <div className="links">
               {!authState.status ? (
                 <>
-                  <Link to="/login"> Login</Link>
+                  <Link to="/login" > Login</Link>
                   <Link to="/registration"> Registration</Link>
                 </>
               ) : (
                 <>
                   <Link to="/"> Home Page</Link>
-                  <Link to="/createpost"> Create A Post</Link>
+                  <Link to="/createpost" data-testid="create-post"> Create A Post</Link>
                 </>
               )}
             </div>
             <div className="loggedInContainer">
               <h1>{authState.username} </h1>
-              {authState.status && <button onClick={logout}> Logout</button>}
+              {authState.status && <button onClick={logout} data-testid="logoutbtn">Logout</button>}
             </div>
           </div>
         <Routes>

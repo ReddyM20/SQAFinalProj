@@ -50,19 +50,19 @@ function Post() {
       });
   };
 
-  const deleteComment = (id) => {
-    axios
-      .delete(`http://localhost:3001/comments/${id}`, {
-        headers: { accessToken: localStorage.getItem("accessToken") },
-      })
-      .then(() => {
-        setComments(
-          comments.filter((val) => {
-            return val.id != id;
-          })
-        );
-      });
-  };
+  // const deleteComment = (id) => {
+  //   axios
+  //     .delete(`http://localhost:3001/comments/${id}`, {
+  //       headers: { accessToken: localStorage.getItem("accessToken") },
+  //     })
+  //     .then(() => {
+  //       setComments(
+  //         comments.filter((val) => {
+  //           return val.id != id;
+  //         })
+  //       );
+  //     });
+  // };
 
   const deletePost = (id) => {
     axios
@@ -134,7 +134,7 @@ function Post() {
           <div className="footer">
             {postObject.username}
             {authState.username === postObject.username && (
-              <button
+              <button data-testid="deletebtn"
                 onClick={() => {
                   deletePost(postObject.id);
                 }}
@@ -149,7 +149,7 @@ function Post() {
       <div className="rightSide">
         <div className="addCommentContainer">
           <input
-            type="text"
+            type="text" data-testid="comment"
             placeholder="Comment..."
             autoComplete="off"
             value={newComment}
@@ -157,7 +157,7 @@ function Post() {
               setNewComment(event.target.value);
             }}
           />
-          <button onClick={addComment}> Add Comment</button>
+          <button onClick={addComment} data-testid="commentbtn"> Add Comment</button>
         </div>
         <div className="listOfComments">
           {comments.map((comment, key) => {

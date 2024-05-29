@@ -53,12 +53,12 @@ function CreatePost() {
           <ErrorMessage name="postText" component="span" />
           <Field
             autocomplete="off"
-            id="inputCreatePost"
+            id="inputCreatePost2"
             name="postText"
             placeholder="Text..."
           />
 
-          <button type="submit"> Create Post</button>
+          <button type="submit" data-testid="createpost-btn"> Create Post</button>
         </Form>
       </Formik>
     </div>
