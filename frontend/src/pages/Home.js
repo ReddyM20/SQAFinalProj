@@ -15,7 +15,7 @@ function Home() {
       if (!localStorage.getItem("accessToken")) {
         navigate("/login");
       } else {
-      axios.get("http://localhost:3001/posts").then((response) => {
+      axios.get("https://fullstack-api-magabilin-manali-1809c0ed523b.herokuapp.com/posts").then((response) => {
         setlistofPosts(response.data);
       });
     }

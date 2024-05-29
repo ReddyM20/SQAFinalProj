@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "redzki15",
-    "database": "sqaDB",
+    "password": "magabilin",
+    "database": "sqa",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "atib8pfc50vwbj0t",
+    "password": "aoqwk7mv8l87anbe",
+    "database": "umz1uuygzilkktka",
+    "host": "sq65ur5a5bj7flas.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
